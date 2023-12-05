@@ -1,0 +1,105 @@
+body, h1, h2, h3, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin: 25px;
+    text-align: left;
+}
+
+/* Add a pseudo-element(here a horizontal line) after the content of the <h1> element */
+h1::after {
+    /* make a content empty */
+    content: "";
+    width: 100%;
+    /* Create a horizontal line of 3 pixels in height */
+    height: 3px;
+    /* Display the element as a block-level element */
+    display: block;
+    background: #FFC44A;
+    margin: 10px 0;
+}
+
+
+form {
+    background-color: #fff;
+    border: 2px solid #FFC44A;
+    border-radius: 5px;
+    padding: 25px;
+    width: aut0;
+    margin: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group-child label {
+    display: inline-block;  
+    /* Set the display property to 'inline-block',
+    which makes the element behave like an inline element 
+    but allows it to have block-level properties like width, height, and margins. */
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+label {
+    font-weight: bold;
+}
+
+/*for mulitple elements*/
+input[type="text"], input[type="password"],
+input[type="email"], input[type="contact-number"],
+select, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+select {
+    width: 40%;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #FFC44A;
+    border: none;
+    color: #f7f7f7;
+    padding: 10px 25px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: deeppink;
+}
+
+/*responsive for extra small screen*/
+@media (max-width: 350px) {
+    form {
+        margin:  5px;
+    }
+}

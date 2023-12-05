@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+
+     <!-- stylesheet for the header (menu) -->
+    <link rel="stylesheet" href="css/MenuStyle.css">
+    
+     <!-- stylesheet for registration.html -->
+    <link rel="stylesheet" href="css/RegistrationStyle.css"> 
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="logo here">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li> 
+                <li><a href="order.html">Order Now</a></li>
+                <li><a href="registration.html" class="active">Register</a></li>
+            </ul>
+        </nav> 
+    </header>
+    
+    <h1 >User Registration</h1>
+    
+    <!-- return validateRegisterationForm():  call validateRegisterationForm() from script.js, when submit btn is click and return result (true/false)-->
+    <!-- action="index.html" : open index.html page if true return-->
+    
+    <form action="index.html" onsubmit="return validateRegisterationForm()" method="post"> 
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" >
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" >
+        </div>
+        
+        <div class="form-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label class="form-group-child" for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label class="form-group-child" for="female">Female</label>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" >
+        </div>
+        
+        <div class="form-group">
+            <label>Favourite Ice Cream:</label>
+            <select id="icecream" name="icecream">
+                <option value="" disabled selected hidden>Select</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="strawberry">Strawberry</option>
+                <option value="mango">Mango</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label class="form-group-child" for="subscribe">Subscribe to newsletter</label>
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" id="register" value="Register" >
+        </div>
+    </form>
+     <footer>
+           <div class="Visit">
+                <h3>Visit Us</h3>
+                <p>
+                    123 Sweet Street<br>
+                    Dessertville, CA 98765
+                </p>
+            </div>
+            <div class="contact">
+                <h3>Conatct Us</h3>
+                <p>
+                    0300-0000-000
+                </p>
+            </div>
+            <div class="about">
+                <h3>About Us</h3>
+                <p>
+                    Established in 1995, we have been serving our community with the finest sweets for decades. Our passion is to create unforgettable moments through the joy of dessert.
+                </p>
+            </div>
+    </footer>
+
+</body>
+</html>
